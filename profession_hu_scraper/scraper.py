@@ -59,7 +59,6 @@ def search_and_process(pages, keyword):
     log.info("data collection started")
 
     while page_number <= pages:
-        # url = f"https://www.profession.hu/allasok/{page_number},0,0,cloud%20fejlesztő%401%401?keywordsearch"
         url = f"https://www.profession.hu/allasok/{page_number},0,0,{keyword}%401%401?keywordsearch"
         log.info(f"url: {unidecode(url)}")
 
@@ -225,7 +224,7 @@ class SqlOps(object):
 
 
 if __name__ == "__main__":
-    handler = logging.FileHandler(APP_DIR / "scraper_with_db.log")
+    handler = logging.FileHandler(APP_DIR / "scraper.log")
     formatter = logging.Formatter("%(asctime)s %(name)-12s %(levelname)-8s %(message)s")
     handler.setFormatter(formatter)
     log.addHandler(handler)

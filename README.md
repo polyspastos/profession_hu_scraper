@@ -8,7 +8,7 @@ A webcrawler for job ads on profession.hu. Basis for the code: [work of mollac](
 <br>
 
 ```
-pip install requirements.txt
+python -m pip install .
 python scraper.py
 ```
 or

@@ -10,7 +10,7 @@ How does it work?
 
 ::
 
-   pip install requirements.txt
+   python -m pip install .
    python scraper.py
 
 or
